@@ -1,0 +1,23 @@
+public int removeMin(Stack<Integer> s) {
+    int smallest = s.peek();
+    Queue<Integer> q = new LinkedList<Integer>();
+    while (!s.isEmpty()) {
+        if (s.peek() < smallest) {
+            smallest = s.peek();
+        }
+        q.add(s.pop());
+    }
+    while (!q.isEmpty()) {
+        int temp = q.remove();
+        if (temp != smallest) {
+            s.push(temp);
+        }
+    }
+    while (!s.isEmpty()) {
+        q.add(s.pop());
+    }
+    while (!q.isEmpty()) {
+        s.push(q.remove());
+    }
+    return smallest;
+}
