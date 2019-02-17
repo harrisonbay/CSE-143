@@ -1,0 +1,18 @@
+public int removeLast() {
+    if (front == null) {
+        throw new NoSuchElementException();
+    }
+    ListNode curr = front;
+    int result;
+    if (curr.next == null) {
+        result = curr.data;
+        front = null;
+    } else {
+        while (curr.next.next != null) {
+            curr = curr.next;
+        }
+        result = curr.next.data;
+        curr.next = null;
+    }
+    return result;
+}
