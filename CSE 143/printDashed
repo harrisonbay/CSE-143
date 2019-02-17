@@ -1,0 +1,12 @@
+public void printDashed(int n) {
+    if (n < 0) {
+        System.out.print("-");
+        n *= -1;
+    }
+    if (n / 10 == 0) {
+        System.out.print(n);
+    } else {
+        printDashed(n / 10);
+        System.out.print("-" + n % 10);
+    }
+}
