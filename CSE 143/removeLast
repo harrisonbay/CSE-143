@@ -2,8 +2,6 @@
 list of integers. For example, if a variable called list stores the following 
 values: 
 
-
-
         [3, 6, 19, 24, -8, 0, 14]
 
    and you make the following call:
