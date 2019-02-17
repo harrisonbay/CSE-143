@@ -16,7 +16,6 @@ construct any structured objects (no array, ArrayList, String, StringBuilder,
 etc) and you may not use a while loop, for loop, or do/while loop to solve this 
 problem; you must use recursion. */ 
 
-
 public void printDashed(int n) {
     if (n < 0) {
         System.out.print("-");

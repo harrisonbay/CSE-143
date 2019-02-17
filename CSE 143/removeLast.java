@@ -32,7 +32,6 @@ values:
  You may not call any other methods of the LinkedIntList class and you may not 
 construct any structured objects to solve this problem. */ 
 
-
 public int removeLast() {
     if (front == null) {
         throw new NoSuchElementException();

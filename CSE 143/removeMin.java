@@ -27,7 +27,6 @@ recursively. Your solution must run in O(n) time where n is the size of the
 stack. Use the Stack and Queue structures described in the cheat sheet and obey 
 the restrictions described there. */ 
 
-
 public int removeMin(Stack<Integer> s) {
     int smallest = s.peek();
     Queue<Integer> q = new LinkedList<Integer>();

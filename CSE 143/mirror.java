@@ -32,6 +32,7 @@ may assume that the array has sufficient capacity to store the new sequence of
 values. 
 
 Write your solution to mirror below. */
+
 public void mirror() {
     Stack<Integer> s = new Stack<Integer>();
     for (int i = 0; i < size; i++) {
