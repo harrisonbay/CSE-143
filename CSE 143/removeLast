@@ -1,6 +1,8 @@
-/*   Write a method called removeLast that removes and
-   returns the last value of a list of integers.  For example, if a variable
-   called list stores the following values:
+/* Write a method called removeLast that removes and returns the last value of a 
+list of integers. For example, if a variable called list stores the following 
+values: 
+
+
 
         [3, 6, 19, 24, -8, 0, 14]
 
@@ -29,8 +31,10 @@
             <methods>
         }
 
-   You may not call any other methods of the LinkedIntList class and you may
-   not construct any structured objects to solve this problem. */
+ You may not call any other methods of the LinkedIntList class and you may not 
+construct any structured objects to solve this problem. */ 
+
+
 public int removeLast() {
     if (front == null) {
         throw new NoSuchElementException();
