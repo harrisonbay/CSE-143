@@ -1,2 +1,2 @@
-# PracticeIt
-PracticeIt solutions that I made. They may not be the most efficient or stylistically correct but they work.
+# CSE 143
+Solutions to various problems that I made. They may not be completely stylistically correct, but I believe that virtually all of them work as intended.
