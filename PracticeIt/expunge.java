@@ -38,3 +38,22 @@ to help you solve the problem:
 
      public static void s2q(Stack s, Queue q) { ... }
      public static void q2s(Queue q, Stack s) { ... } */
+public void expunge(Stack<Integer> s) {
+	Queue<Integer> q = new LinkedList<Integer>();
+	int temp = 0;
+	if (!s.isEmpty()) {
+		temp = s.peek();
+		q.add(s.pop());
+	}
+	while (!s.isEmpty()) {
+		if (temp > s.peek()) {
+			s.pop();
+		} else {
+			temp = s.peek();
+			q.add(s.pop());
+		}
+	}
+	q2s(q, s);
+	s2q(s, q);
+	q2s(q, s);
+}
