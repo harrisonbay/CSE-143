@@ -32,7 +32,8 @@ not use a while loop, for loop or do/while loop to solve this problem;
 you must use recursion. */
 
 // This problem was really, really hard and I feel bad for the students that
-// had to do it for a test.
+// had to do it for a test. This is the most clear way that definitively
+// outlines cases.
 public String collapseSequence(String s, char ch) {
 	if (s.length() == 0) {
 		return "";
@@ -42,6 +43,18 @@ public String collapseSequence(String s, char ch) {
 		} else {
 			return collapseSequence(s.substring(1), ch);
 		}
+	} else {
+		return s.substring(0, 1) + collapseSequence(s.substring(1), ch);
+	}
+}
+
+// This is the reduced redundancy version. In my opinion, this is much
+// more confusing that the first one, but obviously others will disagree.
+public String collapseSequence(String s, char ch) {
+	if (s.length() == 0) {
+		return "";
+	} else if (s.charAt(0) == ch && s.length() != 1 && s.charAt(1) == ch) {
+		return collapseSequence(s.substring(1), ch);
 	} else {
 		return s.substring(0, 1) + collapseSequence(s.substring(1), ch);
 	}
