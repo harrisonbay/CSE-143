@@ -47,8 +47,7 @@ public void writeNumbers(int n) {
 		System.out.print(n);
 	} else if (n % 2 == 1) {
 		System.out.print(n + ", ");
-		writeNumbers(n - 2);
-		System.out.print(", " + (n - 1));
+		writeNumbers(n - 1);
 	} else {
 		writeNumbers(n - 1);
 		System.out.print(", " + n);
