@@ -23,6 +23,7 @@ You must exactly reproduce the format of these examples. Your method
 should throw an IllegalArgumentException if the two strings are of 
 different length. You may NOT use a while loop, for loop or do/while 
 loop to solve this problem; you must use recursion. */ 
+// Most clear version
 public String commonChars(String s1, String s2) {
 	if (s1.length() != s2.length()) {
 		throw new IllegalArgumentException();
@@ -40,4 +41,24 @@ public String commonChars(String s1, String s2) {
 	} else {
 		return "." + commonChars(s1.substring(1), s2.substring(1));
 	}
+}
+
+// Least redundant version
+public String commonChars(String s1, String s2) {
+	if (s1.length() != s2.length()) {
+		throw new IllegalArgumentException();
+	}
+	if (s1.length() == 0) {
+		return "";
+	String temp = "";	
+	} else if (s1.charAt(0) == s2.charAt(0)) {
+		if (s1.charAt(0) == ' ') {
+			temp = " ";
+		} else {
+			temp = "" + s1.charAt(0);
+		}
+	} else {
+		temp = ".";
+	}
+	return temp + commonChars(s1.substring(1), s2.substring(1));
 }
